@@ -8,7 +8,6 @@ INNER JOIN category c
 ON c.category_id = fc.category_id
 ORDER BY f.title ASC
 
--- Exercício 2
 -- Faça uma consulta que retorne a lista de todos os atores com o número filmes que cada ator participou. Ordene a lista pelo numero de filmes, 
 -- iniciando pelos atores que mais atuaram
 SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS numeroDefilmes
@@ -18,7 +17,6 @@ ON a.actor_id = fa.actor_id
 GROUP BY a.actor_id, a.first_name, a.last_name
 ORDER BY numeroDefilmes DESC;
 
--- Exercício 3
 -- Faça uma consulta que retorne a lista de atores que atuaram em filmes com mais de duas horas de
 -- duração (120min). Ordene a lista pelo numero de filmes que cada ator participou.
 SELECT a.actor_id, a.first_name, a.last_name, COUNT(f.film_id) AS numero_filmes
